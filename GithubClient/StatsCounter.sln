@@ -1,0 +1,28 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatsCounter", "StatsCounter\StatsCounter.csproj", "{EF7074CA-056C-499A-9AA9-07569D17DC27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatsCounter.Tests.Unit", "StatsCounter.Tests.Unit\StatsCounter.Tests.Unit.csproj", "{2F0EF91B-F8E3-4030-86EA-0FDF0DF8F3AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatsCounter.Tests.Integration", "StatsCounter.Tests.Integration\StatsCounter.Tests.Integration.csproj", "{F0E86A50-0E35-42A9-B8D2-5AB4D32D1B1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF7074CA-056C-499A-9AA9-07569D17DC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7074CA-056C-499A-9AA9-07569D17DC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7074CA-056C-499A-9AA9-07569D17DC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7074CA-056C-499A-9AA9-07569D17DC27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F0EF91B-F8E3-4030-86EA-0FDF0DF8F3AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F0EF91B-F8E3-4030-86EA-0FDF0DF8F3AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F0EF91B-F8E3-4030-86EA-0FDF0DF8F3AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F0EF91B-F8E3-4030-86EA-0FDF0DF8F3AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0E86A50-0E35-42A9-B8D2-5AB4D32D1B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0E86A50-0E35-42A9-B8D2-5AB4D32D1B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0E86A50-0E35-42A9-B8D2-5AB4D32D1B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0E86A50-0E35-42A9-B8D2-5AB4D32D1B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
