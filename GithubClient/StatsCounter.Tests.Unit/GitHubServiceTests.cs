@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using FluentAssertions;
+using Microsoft.Extensions.Configuration;
 using Moq;
 using Moq.Protected;
 using StatsCounter.Models;
@@ -29,7 +30,11 @@ namespace StatsCounter.Tests.Unit
                     BaseAddress = new Uri("http://localhost"),
                 });
 
-            _gitHubService = new GitHubService(httpClientFactory.Object);
+            var configMock = new Mock<IConfiguration>();
+            configMock.Setup(x => x[It.IsAny<string>()]).Returns("https://api.github.com");
+            var configuration = configMock.Object;
+
+            _gitHubService = new GitHubService(httpClientFactory.Object, configuration);
         }
 
         [Fact]

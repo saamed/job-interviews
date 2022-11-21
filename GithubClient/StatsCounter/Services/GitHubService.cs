@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using StatsCounter.Extensions;
 using StatsCounter.Models;
@@ -16,10 +18,12 @@ namespace StatsCounter.Services
     {
         private readonly HttpClient _httpClient;
 
-        public GitHubService(IHttpClientFactory httpClientFactory)
+        public GitHubService(IHttpClientFactory httpClientFactory, IConfiguration configuration)
         {
-            // DO NOT MODIFY
             _httpClient = httpClientFactory.CreateClient(HttpClientNames.GitHubClient);
+            _httpClient.BaseAddress = new Uri(configuration["GitHubSettings:BaseApiUrl"]);
+            _httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+            _httpClient.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("BaseCodeTest", "1.0"));
         }
 
         public async Task<IEnumerable<RepositoryInfo>> GetRepositoryInfosByOwnerAsync(string owner)

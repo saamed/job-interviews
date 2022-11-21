@@ -37,13 +37,6 @@ namespace StatsCounter
 
             services.AddControllers().AddControllersAsServices();
             
-            services.AddHttpClient<GitHubService>(cfg =>
-            {
-                cfg.BaseAddress = new Uri(_configuration["GitHubSettings:BaseApiUrl"]);
-                cfg.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
-                cfg.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("BaseCodeTest", "1.0"));
-            });
-            
             services
                 .AddTransient<IStatsService, StatsService>();
         }
